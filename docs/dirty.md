@@ -1,0 +1,3 @@
+- `!` allows for altering the value of the original object
+  - `someArr.reverse()!` actually also reverses the someArr itself meanwhile returning the altered value
+- 
