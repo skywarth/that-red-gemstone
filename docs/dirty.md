@@ -1,3 +1,4 @@
 - `!` allows for altering the value of the original object
   - `someArr.reverse()!` actually also reverses the someArr itself meanwhile returning the altered value
-- 
+- `nil` value is absolute nothingness, not sure if its null or undefined yet. Probably `undefined`
+- method calls doesn't require `()`, its optional. e.g: `imCallingSomeMethod;`

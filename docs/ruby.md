@@ -1,5 +1,10 @@
 # Ruby
 
+## Misc
+
+
+
+
 ## Outputs
 
 ### Console
@@ -37,3 +42,19 @@ Is for debugging. Showing an object as it is
 "noice"
 ```
 
+## Comments
+
+### Single line comments
+- `# some comment`. Just the same as `//` in other languages.
+
+### Multi-line comments
+
+- `=begin`, `=end`. Similar to `/* */` in other languages
+
+```ruby
+=begin
+This is a comment line
+it explains that the next line of code displays
+a welcome message
+=end
+```

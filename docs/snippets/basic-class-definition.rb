@@ -16,7 +16,7 @@ end
 
 instance=HelloClass.new('Matthew');
 
-instance.name='test';
+instance.sayHi();
 
 puts instance.name
 
