@@ -9,6 +9,12 @@
 
 ### Level: 1
 
+#### The Odin Project: Ruby
+`online tutorial`
+
+https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby
+
+
 #### Codecademy 
 `online tutorial`
 
