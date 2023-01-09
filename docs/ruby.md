@@ -1,5 +1,9 @@
 # Ruby
 
+## Conventions
+- Var names snake_case
+  - `you_good=false`
+
 ## Conversions
 - `to_f`: convert to float
 - `to_i`: convert to int

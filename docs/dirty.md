@@ -3,3 +3,4 @@
 - `nil` value is absolute nothingness, not sure if its null or undefined yet. Probably `undefined`.
   - When a method doesn't return anything (`void`), it returns nil. Kinda like `void` I suppose
 - method calls doesn't require `()`, its optional. e.g: `imCallingSomeMethod;`
+- variable assignments are 'reference variable' I guess.
