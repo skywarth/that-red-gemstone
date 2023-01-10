@@ -27,7 +27,10 @@ Although I'm not a fan of online tutorials, this one looks decent with it's subj
 
 https://www.rubyguides.com/ruby-tutorial/
 
-Short and concise content for fast progress. 
+Short and concise content for fast progress.
+
+Author also feature a paid version with more comprehensive approach.
+It's called 'Rubby Deep Dive'
 
 
 #### Learn Ruby The Hard Way - Zed A. Shaw & Rob Sobers
