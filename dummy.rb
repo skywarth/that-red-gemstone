@@ -6,19 +6,14 @@ puts 'whaDDup'.capitalize()[0,4]
 puts ' '.empty?
 =end
 
-puts 'sire'.prepend("g'morning ",'there ')
-
-someString='jar'
-
-:wtf_is_symbols
-
-puts :wtf_is_symbols
-
-puts someString.object_id==someString.object_id
-
 class HelloClass
 
-  attr_accessor :name
+  @@this_is_a_class_var='whats up'
+
+  @this_is_an_instance_var='whats down'
+
+  attr_accessor :this_is_a_class_var
+  attr_accessor :this_is_an_instance_var
   def initialize(name='Judas')
     @name=name;
   end
@@ -33,7 +28,16 @@ end
 
 instance=HelloClass.new('Matthew');
 
-instance.name='test';
+puts instance.this_is_an_instance_var
 
-puts instance.name
+puts 'end'
 
+puts "this will be printed only if condition on the right is true" if 80/2==41
+
+
+str_1=60
+str_2=60
+
+puts str_1.equal?(str_2)
+
+puts("woah") || true
