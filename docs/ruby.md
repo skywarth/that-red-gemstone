@@ -21,6 +21,82 @@
   str_1.equal?(str_2) #=>true
 
   ```
+  
+### Ranges
+```ruby
+# Ranges that use '..' to include the given end value.
+(1..4).to_a      # => [1, 2, 3, 4]
+('a'..'d').to_a  # => ["a", "b", "c", "d"]
+# Ranges that use '...' to exclude the given end value.
+(1...4).to_a     # => [1, 2, 3]
+('a'...'d').to_a # => ["a", "b", "c"]
+
+```
+
+## Loops
+
+### `loop`
+- Equivalent (sort of) of `while` in sane programming languages
+- You won't really need to use it
+- You have to use `break` to break it.
+- Just pretend it doesn't exist
+
+```ruby
+i = 0
+loop do
+i += 1
+break if i == 10
+end
+```
+
+### `while`
+- good old `while` you're familiar with
+
+```ruby
+
+while someCondition do
+  #execution block
+end
+```
+
+### `until`
+- opposite of `while` (yikes)
+- run until the condition is true
+- Avoid using `!` in it's condition, because you were to use `!` you could just use `while` yes ?
+
+```ruby
+
+until someCondition do
+  #execution block
+end
+```
+
+### `for`
+- classic `for` loop
+
+```ruby
+for i in 0..10 do
+  puts "#{i}"
+end
+```
+
+### `.times`
+- do something fixed (countable) amount of times, for example 3 times.
+- starts from `0` !
+```ruby
+3.times do |number|
+  puts "Curr number #{number}"
+end
+```
+
+### `upto` and `downto`
+- Dude there is `for` loops, like... I can't even...
+
+```ruby
+5.upto(10) {|num| print "#{num} " }     #=> 5 6 7 8 9 10
+
+10.downto(5) {|num| print "#{num} " }   #=> 10 9 8 7 6 5
+```
 
 
 ## Conditions
@@ -167,4 +243,6 @@ a welcome message
 - There is a `prepend` but no `append` method. 
   - I know it's not necessary, but where is the consistency though.
   - And `prepend` expects wildcard parameters (any number of arguments), but doesn't accept array. Gimme my copium stat !
-- Constants are subject to change, unlike almost all the programming languages. It just gives warning. 
+- Constants are subject to change, unlike almost all the programming languages. It just gives warning.
+- there is no `i++`, damnation...
+- maybe I'm just old-school but this whole opposite acting syntax is not appealing to me. (e.g: `while` and `until`)

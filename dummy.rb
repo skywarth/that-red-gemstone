@@ -30,14 +30,23 @@ instance=HelloClass.new('Matthew');
 
 puts instance.this_is_an_instance_var
 
-puts 'end'
+y = [1, 2, 3, 4, 5]
+y.each do |a|
+  print "#{a + 1},"
+end
 
-puts "this will be printed only if condition on the right is true" if 80/2==41
 
+i=0
+while i < 2 do
+  puts "i is #{i}"
+  i += 1
+end
 
-str_1=60
-str_2=60
+0.upto(2) do |i|
+  puts "i is #{i}"
+end
 
-puts str_1.equal?(str_2)
+for i in 0..2 do
+  puts "i is #{i}"
+end
 
-puts("woah") || true
