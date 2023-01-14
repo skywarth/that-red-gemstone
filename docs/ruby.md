@@ -22,7 +22,7 @@
 
   ```
   
-### Arrays
+### Array
 - zero based indexing
 - `some_arr[-1]` gives the last element
   - Alternatively `some_arr.last`
@@ -33,7 +33,35 @@
 - `Array.new(3, 7) #=> [7, 7, 7]`
 - Array difference: `[1, 1, 1, 2, 2, 3, 4] - [1, 4]  #=> [2, 2, 3]`
 
-  
+### Hash
+- Its simply array with custom keying/indexing. Same as array, it includes `Enumarable`
+- Association is done with **hash rocket** `=>`
+- create new hash by `new_hash={}` or `new_hash=Hash.new`
+- Rocket syntax
+  ```ruby
+  john_doe={
+          "occupation"=>'janitor',
+          "age"=>'42',
+          "region"=>"midwest"
+  }
+  ```
+- Symbol syntax
+  ```ruby
+  john_doe={
+          occupation:'janitor',
+          age:'42',
+          region:"midwest"
+  }
+  ```
+- access by:
+  - `john_doe.fetch('age')`, raises error if key doesn't exist
+    - `john_doe.fetch('age',30)` second param is for default value
+  - `john_doe['age']`, just like array. Beware this'll silently return `nil` if key is not found. 
+- setting values:
+  - `john_doe['keyphrase']='sawed_off'`. Works both for adding and updating values
+ 
+
+
 ### Ranges
 ```ruby
 # Ranges that use '..' to include the given end value.
@@ -256,9 +284,13 @@ a welcome message
   - Please, this isn't some low-level language, have some consistency.
 - There is a `prepend` but no `append` method. 
   - I know it's not necessary, but where is the consistency though.
-  - And `prepend` expects wildcard parameters (any number of arguments), but doesn't accept array. Gimme my copium stat !
+  - And `prepend` expects wildcard parameters (any number of arguments), but doesn't accept array. Gimme my copium, stat !
 - Constants are subject to change, unlike almost all the programming languages. It just gives warning.
 - there is no `i++`, damnation...
 - maybe I'm just old-school but this whole opposite acting syntax is not appealing to me. (e.g: `while` and `until`)
 - there is `!` for mutation but it is not consistent with most of the methods, it's hard to know which methods are destructive/mutating without checking documentation
 - `?` convention for bool methods, kinda unnecessary. Name alone should suffice for such with.
+- Why is this a thing dude, like what was the idea. Who would need an object to be a key
+  ```ruby
+  cursed={{key: "key"} => "hash as a key"}
+  ```

@@ -34,7 +34,15 @@ puts instance.this_is_an_instance_var
 arr=[1,2,3,4]
 
 
-arr.pop
-arr.pop
+arr2=[
+  'qwe'=>22
+]
 
-puts arr
+arr3={
+  'qwe'=>22
+}
+
+puts arr2
+puts arr3
+
+puts arr3[:zz]
