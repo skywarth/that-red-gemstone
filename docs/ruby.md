@@ -22,6 +22,18 @@
 
   ```
   
+### Arrays
+- zero based indexing
+- `some_arr[-1]` gives the last element
+  - Alternatively `some_arr.last`
+- `push()` for adding to the end
+  - `unshift()` for adding to the beginning
+- `my_arr = [1, 2, 3]`
+- `Array.new(3) #=> [nil, nil, nil]`
+- `Array.new(3, 7) #=> [7, 7, 7]`
+- Array difference: `[1, 1, 1, 2, 2, 3, 4] - [1, 4]  #=> [2, 2, 3]`
+
+  
 ### Ranges
 ```ruby
 # Ranges that use '..' to include the given end value.
@@ -130,6 +142,9 @@ puts "this will be printed only if condition on the right is true" if 80/2==40
 ## Conventions
 - Var names snake_case
   - `you_good=false`
+- If a method returns boolean, it should end with `?`.
+  - E.g: `empty?`
+
 
 ## Conversions
 - `to_f`: convert to float
@@ -164,7 +179,6 @@ puts "this will be printed only if condition on the right is true" if 80/2==40
 #### Local variable
 - `my_var='fort'`
 - good old variable, classic
-- 
 
 
 
@@ -246,3 +260,5 @@ a welcome message
 - Constants are subject to change, unlike almost all the programming languages. It just gives warning.
 - there is no `i++`, damnation...
 - maybe I'm just old-school but this whole opposite acting syntax is not appealing to me. (e.g: `while` and `until`)
+- there is `!` for mutation but it is not consistent with most of the methods, it's hard to know which methods are destructive/mutating without checking documentation
+- `?` convention for bool methods, kinda unnecessary. Name alone should suffice for such with.

@@ -30,23 +30,11 @@ instance=HelloClass.new('Matthew');
 
 puts instance.this_is_an_instance_var
 
-y = [1, 2, 3, 4, 5]
-y.each do |a|
-  print "#{a + 1},"
-end
+
+arr=[1,2,3,4]
 
 
-i=0
-while i < 2 do
-  puts "i is #{i}"
-  i += 1
-end
+arr.pop
+arr.pop
 
-0.upto(2) do |i|
-  puts "i is #{i}"
-end
-
-for i in 0..2 do
-  puts "i is #{i}"
-end
-
+puts arr
