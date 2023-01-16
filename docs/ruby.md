@@ -35,7 +35,8 @@
 
 ### Hash
 - Its simply array with custom keying/indexing. Same as array, it includes `Enumarable`
-- Association is done with **hash rocket** `=>`
+- In other words, it is simply object (in many other programming langs)
+- Key-value association is done with **hash rocket** `=>`
 - create new hash by `new_hash={}` or `new_hash=Hash.new`
 - Rocket syntax
   ```ruby
