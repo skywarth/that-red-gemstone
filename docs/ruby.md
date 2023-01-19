@@ -22,6 +22,23 @@
 
   ```
   
+### Methods
+- Everything in Ruby is object. Hence there are no functions, only methods.
+  - Functions doesn't have an associated object, 
+  - Methods belong to an object
+  - But in Ruby context it doesn't matter if you refer to it as function or method
+- Parenthesis are optional
+  - `instance.some_method` is valid, as well as `instance.some_method()`
+```ruby
+def is_that_john_wayne
+  "is this me ?"
+end
+```
+
+- defined by `def function_name`
+- Convention is **snake_case**
+
+
 ### Array
 - zero based indexing
 - `some_arr[-1]` gives the last element
@@ -173,7 +190,9 @@ puts "this will be printed only if condition on the right is true" if 80/2==40
   - `you_good=false`
 - If a method returns boolean, it should end with `?`.
   - E.g: `empty?`
-
+- While documenting, mentioning your methods, use `#your_method_name` convention
+  - It is useful as to write the full name of a method using class too. Like `MyClass#your_method_name`
+  - `#` is called 'octothorpe'. You have to be dyslexic pronounce that crap. 
 
 ## Conversions
 - `to_f`: convert to float
