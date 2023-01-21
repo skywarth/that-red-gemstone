@@ -31,18 +31,12 @@ instance=HelloClass.new('Matthew');
 puts instance.this_is_an_instance_var
 
 
-arr=[1,2,3,4]
+def add_to_array(arr)
+  return arr.clone.push(55);
+end
 
+s=[13,44,21]
 
-arr2=[
-  'qwe'=>22
-]
-
-arr3={
-  'qwe'=>22
-}
-
-puts arr2
-puts arr3
-
-puts arr3[:zz]
+puts s
+add_to_array(s)
+puts s

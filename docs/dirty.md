@@ -1,4 +1,4 @@
-- `!` allows for altering the value of the original object
+- `!` 
   - `someArr.reverse()!` actually also reverses the someArr itself meanwhile returning the altered value
 - `nil` value is absolute nothingness, not sure if its null or undefined yet. Probably `undefined`.
   - When a method doesn't return anything (`void`), it returns nil. Kinda like `void` I suppose

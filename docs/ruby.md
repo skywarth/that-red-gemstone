@@ -37,7 +37,28 @@ end
 
 - defined by `def function_name`
 - Convention is **snake_case**
-
+- There is **implicit return**, methods return the last expression if no **explicit** return is indicated 
+- Predicate methods: those methods which return boolean, which also means they have `?` at the end of its name
+  - `60.even?`
+- `!` after calling a method (chain) alters the original data
+  - `someArr.reverse()!` actually also reverses the someArr itself meanwhile returning the altered value
+  - allows for altering the value of the original object
+    ```ruby
+    whisper = "HELLO EVERYBODY"
+  
+    puts whisper.downcase #=> "hello everybody"
+    puts whisper #=> "HELLO EVERYBODY"
+    puts whisper.downcase! #=> "hello everybody"
+    puts whisper #=> "hello everybody"
+    ```
+- Methods mutate array params
+  - You may use `#clone` to avoid this (beware this is not deep copy)
+  ```ruby
+  #for example, this method alters the original array
+  def add_to_array(arr)
+    return arr.push(55);
+  end
+  ``` 
 
 ### Array
 - zero based indexing
@@ -314,3 +335,4 @@ a welcome message
   ```ruby
   cursed={{key: "key"} => "hash as a key"}
   ```
+- `elsif` instead of `elseif`...
