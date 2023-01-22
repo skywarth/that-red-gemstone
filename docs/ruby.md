@@ -298,6 +298,11 @@ Is for debugging. Showing an object as it is
 "noice"
 ```
 
+## Debugging
+1. `gem install pry-byebug`
+2. add `require 'pry-byebug'` to the beginning of file
+3. add `binding.pry` wherever you want to halt execution. Similar to `dd()` in PHP or `debugger` in JS 
+
 ## Comments
 
 ### Single line comments

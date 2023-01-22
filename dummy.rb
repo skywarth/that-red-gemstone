@@ -1,3 +1,6 @@
+require 'pry-byebug'
+
+
 =begin
 puts 8.even?
 
@@ -32,6 +35,7 @@ puts instance.this_is_an_instance_var
 
 
 def add_to_array(arr)
+  binding.pry
   return arr.clone.push(55);
 end
 
