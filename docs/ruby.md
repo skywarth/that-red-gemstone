@@ -99,6 +99,54 @@ end
 - setting values:
   - `john_doe['keyphrase']='sawed_off'`. Works both for adding and updating values
  
+### Enumerable
+- ```fiends.select { |fiend| fiend != 'Lorne' }```
+  - Or ```fiend.reject { |fiend| fiend == 'Lorne' }```
+  - `|fiend|` here is a **block variable** 
+- Even though you can do most of the enumeration extension methods with `#each`, you shouldn't always use it.
+  - There is a best tool for everything
+- Shorthand/closure (similar to arrow function in JS) ```arr.select { |greeting| greeting!='heya' }```
+  - expanded version, same functionality: 
+    ```ruby
+    arr.select do |greeting|
+       greeting!='heya'
+    end
+    ```
+- Enumerable methods are shared by `array` and `hash` but they might slightly differ sometimes:
+  - E.g: When `#each` applied on a hash,  `my_hash.each { |key, value| puts "#{key} is #{value}" }`
+- `#each` always return the original array. Whatever you do inside the block, stays in the block.
+- If you want to change the array/hash, then use `#map`. Almost identical to `#each`, difference being whatever you return from the block is assigned to corresponding item.
+  ```ruby
+  arr=[3,32,44,53]
+  
+  
+  arr=arr.map do |value| #arr.map! would work too
+    value.pow(2)
+  
+  end
+  #9,1024,1936,2809
+  ```
+- `#select` or `#filter` (same), return those values that eval to `true` as block.
+
+  ```ruby
+  arr=[3,32,44,53]
+  
+  arr.filter! do |val|
+    val>40
+  end
+  #[44,53]
+  ```
+  
+- `#reduce {|accumulator,item| someaction }`
+  - optionally you may pass initial value for accumulator `#reduce(66){...}` 
+    ```ruby
+    my_numbers = [5, 6, 7, 8]
+  
+    my_numbers.reduce(1000) { |sum, number| sum + number }
+    #=> 1026
+    ```
+
+
 
 
 ### Ranges
@@ -341,3 +389,8 @@ a welcome message
   cursed={{key: "key"} => "hash as a key"}
   ```
 - `elsif` instead of `elseif`...
+- `#each` yields `|value|` param on array, but yields `|key,value|` on hash. Hellooooo ?? ordering ?!
+  - And no, you can't just take the value from hash. 
+  - Opposed to (in PHP) `foreach(arr as $key=>$value)` which renders it entirely optional to your liking whether you want the value only, or along with key. But no, not in Ruby. You don't want the key ? Well suck it, you gotta have the key.
+  - and there is also `#each_with_index` which yield `|value,key|` **NOTICE THIS SHITE IS DIFFERENT FROM THE ONE ABOVE**. And this one doesn't force you to use two param yield, you may only yield `|value|` if you want. Dude, I'm losing it. All I want is some consistency
+  - not-so-fun-fact: `#each_with_index` and `#each.with_index` both exist. And yes, you're not in a nightmare.

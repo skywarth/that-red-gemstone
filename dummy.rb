@@ -29,18 +29,13 @@ def hi
   puts "Hello World!"
 end
 
-instance=HelloClass.new('Matthew');
+my_hash = { "one" => 1, "two" => 2 }
 
-puts instance.this_is_an_instance_var
+arr=[3,32,44,53]
 
+arr.map! do |value|
+  value.pow(2)
 
-def add_to_array(arr)
-  binding.pry
-  return arr.clone.push(55);
 end
 
-s=[13,44,21]
-
-puts s
-add_to_array(s)
-puts s
+puts arr

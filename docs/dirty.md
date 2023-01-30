@@ -46,3 +46,7 @@ Variable types:
 - Class variables (i bet this is static variables)
 - Instance variables (propery/attribute ?)
 - Local variables
+
+
+- String is mutable
+- Integer is immutable
